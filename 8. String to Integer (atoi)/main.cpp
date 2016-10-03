@@ -7,9 +7,24 @@
 //
 
 #include <iostream>
+#include <string>
+#include <sstream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+using namespace std;
+
+int myAtoi(string str)
+{
+    istringstream is(str);
+    int result = 0;
+    is >> result;
+
+    return result;
+}
+
+int main(int argc, const char * argv[])
+{
+    int result = myAtoi("");
+    cout << result;
+
     return 0;
 }
